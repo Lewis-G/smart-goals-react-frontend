@@ -1,8 +1,10 @@
+import Task from "./components/Task"
+
 function App() {
 
   return (
     <>
-      <h1>Hello World!</h1>
+      <Task name="laundry" tags={["hello", "world"]} priorityLevel={1} />
     </>
   )
 }
