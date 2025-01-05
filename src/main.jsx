@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import AuthPage from './pages/AuthPage.jsx'
 import NotFoundPage from './pages/NotFoundPage.jsx'
 import TodayPage from './pages/TodayPage.jsx';
+import GoalsMainPage from './pages/GoalsMainPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -15,7 +16,10 @@ const router = createBrowserRouter([
   },
   {
     path: '/goals',
-    element: <TodayPage />,
+    element: <GoalsMainPage />,
+    children: [
+      { path: '/goals/today', element: <TodayPage /> },
+    ],
   },
 ]);
 
